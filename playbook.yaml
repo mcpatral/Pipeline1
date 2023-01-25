@@ -1,0 +1,11 @@
+---
+- name: configuring nginx webserver
+  host: 
+  tasks:
+    - name: installing nginx server
+       apt: nginx
+       state: latest
+    - name: starting nginx service
+      service:
+        name: nginx
+        state: started
